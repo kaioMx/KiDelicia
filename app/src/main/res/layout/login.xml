@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDED14">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="237dp"
+        android:layout_height="199dp"
+        android:src="@drawable/logo"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="310dp"
+        android:layout_height="71dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="286dp"
+        tools:text="example@gmail.com" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="310dp"
+        android:layout_height="73dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="375dp"
+        tools:text="senha" />
+
+    <Button
+        android:id="@+id/bEntrar"
+        android:layout_width="190dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#118DFF"
+        android:text="Entrar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="537dp" />
+
+    <Button
+        android:id="@+id/bCadastro"
+        android:layout_width="190dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#118DFF"
+        android:text="Cadastrar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="620dp" />
+
+    <Button
+        android:id="@+id/bSenhaEsquecida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDED14"
+        android:text="Esqueceu sua senha?"
+        android:textColor="#037CEB"
+        android:textColorLink="#037CEB"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
