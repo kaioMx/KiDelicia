@@ -12,12 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KiDelicia"
         tools:targetApi="31">
+
+        <activity android:name=".TelaJornal"></activity>
+        <activity android:name=".TelaConta"></activity>
+        <activity android:name=".TelaOferta"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".TelaHome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

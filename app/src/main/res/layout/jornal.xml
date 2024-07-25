@@ -85,41 +85,48 @@
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/homeButton"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
             android:src="@drawable/casa" />
 
         <ImageButton
-            android:id="@+id/listButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical|start"
-            android:layout_marginStart="105dp"
+            android:id="@+id/jornalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="112dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
             android:src="@drawable/jornal" />
 
         <ImageButton
-            android:id="@+id/cartButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical|end"
-            android:layout_marginEnd="105dp"
+            android:id="@+id/ofertaButton"
+            android:layout_width="92dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="200dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
             android:src="@drawable/oferta" />
 
         <ImageButton
-            android:id="@+id/searchButton"
+            android:id="@+id/contaButton"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:layout_marginEnd="16dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
             android:src="@drawable/conta" />
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

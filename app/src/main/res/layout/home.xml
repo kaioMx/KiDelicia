@@ -6,16 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".TelaHome">
 
     <!-- header -->
 
     <FrameLayout
         android:id="@+id/header"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="88dp"
         android:background="#FDED14"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/logo"
@@ -23,8 +25,7 @@
             android:layout_height="88dp"
             android:layout_gravity="start|center"
             android:layout_margin="16dp"
-            android:src="@drawable/logo"
-            tools:ignore="MissingConstraints" />
+            android:src="@drawable/logo" />
 
         <ImageButton
             android:id="@+id/notificationIcon"
@@ -32,19 +33,20 @@
             android:layout_height="46dp"
             android:layout_gravity="end|center"
             android:layout_margin="16dp"
-            android:background="@drawable/notificacao"
-            tools:ignore="MissingConstraints" />
+            android:background="@drawable/notificacao" />
     </FrameLayout>
 
-    <!-- header -->
+    <!-- ScrollView for content -->
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="414dp"
-        android:layout_height="536dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/white"
-        tools:ignore="MissingConstraints,UnknownId"
-        tools:layout_editor_absoluteY="88dp">
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,59 +156,60 @@
         </LinearLayout>
     </ScrollView>
 
-
     <!-- footer -->
+
     <FrameLayout
         android:id="@+id/footer"
-        android:layout_width="413dp"
+        android:layout_width="0dp"
         android:layout_height="90dp"
         android:background="#FFFFFF"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="643dp">
-
-        <!--borda-->
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="5dp"
-            android:layout_gravity="top"
-            android:background="@color/black" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/homeButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center|start"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/casa"
-            tools:src="@drawable/casa" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/casa" />
 
         <ImageButton
-            android:id="@+id/listButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical|start"
-            android:layout_marginStart="105dp"
+            android:id="@+id/jornalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="112dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/jornal" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/jornal"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <ImageButton
-            android:id="@+id/cartButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical|end"
-            android:layout_marginEnd="105dp"
+            android:id="@+id/ofertaButton"
+            android:layout_width="92dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="200dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
             android:src="@drawable/oferta" />
 
         <ImageButton
-            android:id="@+id/searchButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center|end"
+            android:id="@+id/contaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
             android:src="@drawable/conta" />
     </FrameLayout>
+
     <!-- footer -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,9 +12,10 @@
         android:layout_width="237dp"
         android:layout_height="199dp"
         android:src="@drawable/logo"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp" />
 
     <EditText
         android:id="@+id/txtEmail"
@@ -23,9 +24,10 @@
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textEmailAddress"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="286dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="52dp"
         tools:text="example@gmail.com" />
 
     <EditText
@@ -35,30 +37,11 @@
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="375dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
         tools:text="senha" />
-
-    <Button
-        android:id="@+id/bEntrar"
-        android:layout_width="190dp"
-        android:layout_height="66dp"
-        android:backgroundTint="#118DFF"
-        android:text="Entrar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="537dp" />
-
-    <Button
-        android:id="@+id/bCadastro"
-        android:layout_width="190dp"
-        android:layout_height="66dp"
-        android:backgroundTint="#118DFF"
-        android:text="Cadastrar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="620dp" />
 
     <Button
         android:id="@+id/bSenhaEsquecida"
@@ -68,8 +51,31 @@
         android:text="Esqueceu sua senha?"
         android:textColor="#037CEB"
         android:textColorLink="#037CEB"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="460dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/bEntrar"
+        android:layout_width="190dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#118DFF"
+        android:text="Entrar"
+        app:layout_constraintTop_toBottomOf="@+id/bSenhaEsquecida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp" />
+
+    <Button
+        android:id="@+id/bCadastro"
+        android:layout_width="190dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#118DFF"
+        android:text="Cadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/bEntrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

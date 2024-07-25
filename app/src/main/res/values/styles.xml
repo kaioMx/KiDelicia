@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom ActionBar style without title -->
+    <style name="CustomActionBarNoTitle" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="displayOptions">showHome|useLogo</item>
+        <item name="background">@color/amarelo</item> <!-- Background color for Action Bar -->
+    </style>
+</resources>
+

@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Tcadastro"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".TelaHome">
 
     <!-- header -->
 
     <FrameLayout
-        android:id="@+id/frame1"
-        android:layout_width="410dp"
+        android:id="@+id/header"
+        android:layout_width="0dp"
         android:layout_height="88dp"
         android:background="#FDED14"
-        app:layout_constraintDimensionRatio=""
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/logo"
@@ -22,31 +24,21 @@
             android:layout_height="88dp"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:src="@drawable/logo"
-            tools:ignore="MissingConstraints" />
+            android:src="@drawable/logo" />
 
     </FrameLayout>
 
-    <!-- header -->
-
-    <EditText
-        android:id="@+id/txtConfirmaSenha"
-        android:layout_width="285dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="numberPassword"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="356dp" />
+    <!-- Email -->
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Escreva seu email"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="209dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/txtEmailCadastro"
@@ -54,19 +46,23 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="228dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="8dp"
         tools:text="example@gmail.com" />
+
+    <!-- Senha -->
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Senha"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmailCadastro"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/txtSenha"
@@ -74,27 +70,45 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="numberPassword"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="292dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Confirme a Senha -->
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirme sua senha"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="337dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSenha"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/txtConfirmaSenha"
+        android:layout_width="285dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="numberPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView5"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Telefone -->
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefone"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="401dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtConfirmaSenha"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/txtTelefone"
@@ -102,18 +116,22 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="phone"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="420dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView6"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- CPF -->
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CPF"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTelefone"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/txtCpf"
@@ -121,9 +139,12 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="number"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botão Confirmar -->
 
     <Button
         android:id="@+id/bConfirmar"
@@ -131,8 +152,9 @@
         android:layout_height="66dp"
         android:backgroundTint="#118DFF"
         android:text="Confirmar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="555dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCpf"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

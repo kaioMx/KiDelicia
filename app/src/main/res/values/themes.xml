@@ -1,9 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.KiDelicia" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Base application theme for light mode -->
+    <style name="Base.Theme.KiDelicia.Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary color for light mode -->
+        <item name="colorPrimary">@color/amarelo</item>
+        <!-- Primary dark color for light mode -->
+        <item name="colorPrimaryDark">@color/amarelo_escuro</item>
+        <!-- Accent color for light mode -->
+        <item name="colorAccent">@color/roxo</item>
+        <!-- Customizando a Action Bar para light mode -->
+        <item name="actionBarStyle">@style/CustomActionBarNoTitle</item>
     </style>
 
-    <style name="Theme.KiDelicia" parent="Base.Theme.KiDelicia" />
+    <!-- Base application theme for dark mode -->
+    <style name="Base.Theme.KiDelicia.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary color for dark mode -->
+        <item name="colorPrimary">@color/amarelo</item>
+        <!-- Primary dark color for dark mode -->
+        <item name="colorPrimaryDark">@color/amarelo_escuro</item>
+        <!-- Accent color for dark mode -->
+        <item name="colorAccent">@color/roxo</item>
+        <!-- Customizando a Action Bar para dark mode -->
+        <item name="actionBarStyle">@style/CustomActionBarNoTitle</item>
+    </style>
+
+    <!-- Application theme that uses light and dark themes -->
+    <style name="Theme.KiDelicia" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/amarelo</item>
+        <item name="colorPrimaryDark">@color/amarelo_escuro</item>
+        <item name="colorAccent">@color/roxo</item>
+        <item name="actionBarStyle">@style/CustomActionBarNoTitle</item>
+    </style>
 </resources>
