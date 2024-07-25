@@ -12,6 +12,6 @@ public class TelaJornal extends AppCompatActivity {
         setContentView(R.layout.jornal);
 
         // Chamar o método Footer para configurar os botões do footer
-        TelaHome.Footer(this, findViewById(R.id.Tjornal));
+        footer.Footer(this, findViewById(R.id.Tjornal));
     }
 }

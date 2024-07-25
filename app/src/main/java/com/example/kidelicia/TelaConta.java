@@ -13,7 +13,7 @@ public class TelaConta extends AppCompatActivity {
         setContentView(R.layout.conta);
 
         // Chamar o método Footer para configurar os botões do footer
-        TelaHome.Footer(this, findViewById(R.id.Tconta));
+        footer.Footer(this, findViewById(R.id.Thome));
     }
 
 }
