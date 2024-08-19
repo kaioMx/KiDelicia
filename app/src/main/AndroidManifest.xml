@@ -15,7 +15,7 @@
 
         <activity android:name=".TelaJornal"></activity>
         <activity android:name=".TelaConta"></activity>
-        <activity android:name=".TelaOferta"></activity>
+
         <activity
             android:name=".TelaHome"
             android:exported="true">

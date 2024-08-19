@@ -9,7 +9,7 @@ public class footer {
     public static void Footer(Context context, View layout) {
         // Referenciar os botões
         ImageButton Bjornal = layout.findViewById(R.id.jornalButton);
-        ImageButton Bhome = layout.findViewById(R.id.homeButton);
+        ImageButton Bhome = layout.findViewById(R.id.Tadm);
         ImageButton Boferta = layout.findViewById(R.id.ofertaButton);
         ImageButton Bconta = layout.findViewById(R.id.contaButton);
 
