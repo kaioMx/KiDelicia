@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275251663958",
+    "project_id": "appmercad",
+    "storage_bucket": "appmercad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275251663958:android:c1524d7057f326274e97f7",
+        "android_client_info": {
+          "package_name": "com.example.kidelicia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvHxhiIxzUL4HVuaSBxFWtN8nxLPGRT8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
