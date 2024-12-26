@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application) // Usando alias do TOML
-    id("com.google.gms.google-services") // Outros plugins necessários
 }
 
 
@@ -45,7 +44,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     //dependencia para o banco de dados
-    implementation(platform(libs.firebase.bom))
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation("mysql:mysql-connector-java:5.1.49")
 
-    implementation(libs.firebase.analytics)
 }

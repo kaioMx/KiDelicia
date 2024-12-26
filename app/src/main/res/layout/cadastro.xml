@@ -152,6 +152,7 @@
         android:layout_height="66dp"
         android:backgroundTint="#118DFF"
         android:text="Confirmar"
+        android:onClick="btnConfirmar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtCpf"
         android:layout_marginStart="110dp"
