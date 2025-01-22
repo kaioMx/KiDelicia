@@ -1,4 +1,4 @@
-package com.example.jornal;
+package com.example.kidelicia;
 
 import android.app.Activity;
 import android.content.Intent;
