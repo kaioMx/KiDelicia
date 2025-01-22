@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admjornal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header com ConstraintLayout para responsividade -->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:background="#FDED14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="166dp"
+            android:layout_height="58dp"
+            android:layout_gravity="start|center"
+            android:layout_margin="1dp"
+            android:src="@drawable/logo" />
+
+        <ImageButton
+            android:id="@+id/notificationIcon"
+            android:layout_width="27dp"
+            android:layout_height="34dp"
+            android:layout_gravity="end|center"
+            android:layout_margin="16dp"
+            android:background="@drawable/notificacao" />
+    </FrameLayout>
+
+    <!-- Título da tela de administrador -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Administração de Jornal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <!-- Formulário para o administrador adicionar o jornal -->
+    <LinearLayout
+        android:id="@+id/admin_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TextView
+            android:id="@+id/labelTituloJornal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título do Jornal"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/inputTituloJornal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o título do jornal" />
+
+        <TextView
+            android:id="@+id/labelDataJornal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data do Jornal"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/inputDataJornal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite a data do jornal (dd/mm/aaaa)" />
+
+        <TextView
+            android:id="@+id/labelImagemJornal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imagem do Jornal"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonUploadImagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carregar Imagem"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/labelImagemSelecionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nenhuma imagem selecionada"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/buttonPublicarJornal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publicar Jornal"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <!-- Footer com itens de navegação -->
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/Tadm"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/casa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/jornalButton"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/jornalButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/jornal"
+                app:layout_constraintStart_toEndOf="@id/Tadm"
+                app:layout_constraintEnd_toStartOf="@id/ofertaButton"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/ofertaButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/oferta"
+                app:layout_constraintStart_toEndOf="@id/jornalButton"
+                app:layout_constraintEnd_toStartOf="@id/contaButton"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/contaButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/conta"
+                app:layout_constraintStart_toEndOf="@id/ofertaButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
