@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissão para acessar a internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Permissões para acessar imagens no armazenamento -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -18,15 +22,17 @@
 
         <activity android:name=".TelaJornal"></activity>
         <activity android:name=".TelaConta"></activity>
-
+        <activity android:name=".TelaCadastro"></activity>
+        <activity android:name=".TelaHome"></activity>
         <activity
-            android:name=".TelaCadastro"
+            android:name=".AdmJornal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
